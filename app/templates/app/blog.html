@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Our Blogs{% endblock title %}
+
+{% block content %}    
+
+<div class="container">
+  <div class="row g-5">
+    {% for post in posts %}
+    <div class="col-lg-4">
+      <div class="blog-post">
+        <a href="" class="tag">{{ post.category }}</a>
+        {% if post.image %}
+                    <img src="{{ post.image.url }}" class="card-img-top mt-3" height="200px" width="50%%" alt="{{ post.title }}">
+        {% endif %}
+        <small>
+          <p class="card-text"><small class="text-muted">Posted By: {{ post.author.username }} &nbsp; &nbsp; Date: {{ post.date }}</small></p>
+          
+        </small>
+      
+        <h4 class="card-title">{{ post.title }}</h4>
+        <p class="card-text">{{ post.content|slice:":250" }}...</p>
+      </div>
+    </div>
+    {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info" role="alert">
+                    No blog posts available.
+                </div>
+            </div>
+    {% endfor %}
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  {% endblock content %}    
+    

@@ -1,0 +1,49 @@
+$("#hero-slider").owlCarousel({
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:false,
+    loop:true,
+    margin:0,
+    items:1,
+    smartSpeed:670,
+    dots:false,
+    nav:true,
+    navText:['PREV','NEXT'],
+    responsive:{
+        0:{
+            nav:true
+        }
+    }
+})
+
+$('#project-slider').owlCarousel({
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:false,
+    loop:true,
+    margin:25,
+    nav:true,
+    responsive:{
+        0:{
+            items:1,
+            margin:3
+        },
+        600:{
+            items:3
+        },
+        1140:{
+            items:1,
+            center:true,
+
+        }
+    }
+})
+$('.owl-carousel').owlCarousel({
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    loop:true,
+    margin:10,
+    nav:false,
+    items:1,
+})

@@ -1,0 +1,146 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Paige's Eriteta Page{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/boxicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+
+    <!-- Top navbar -->
+   <nav class="top-nav">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-auto">
+          <p class="contact">
+            <i class='bx bxs-envelope'></i>
+            <span>
+              elvis@gmail.com
+            </span>
+          </p>
+          <p class="contact">
+            <i class='bx bx-phone-call'></i>
+            <span>
+              +234 906 945 8366
+            </span>
+          </p>
+        </div>
+        <div class="col-auto">
+          <div class="social-links">
+            <a href=""><i class='bx bxl-linkedin'></i></a>
+            <a href=""><i class='bx bxl-instagram'></i></a>
+            <a href=""><i class='bx bxl-youtube'></i></a>
+            <a href=""><i class='bx bxl-twitter' ></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"> <img src="{% static 'images/logo.jpg' %}" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'services' %}">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'review' %}">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="addDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class='bx bx-plus-circle'></i>
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="addDropdown">
+                  <li>
+                      <a class="dropdown-item" href="{% url 'form' %}">
+                          New Blog
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="{% url 'worker' %}">
+                         New Employee
+                      </a>
+                  </li>
+              </ul>
+          </li>
+        
+        </ul>
+        <a href=""  class="btn btn-brand"  data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</a>
+      </div>
+    </div>
+  </nav>
+    
+    {% block content %}
+      
+ 
+{% endblock content %}
+<!-- Footer -->
+ <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div>
+            <center>
+            <a class="navbar-brand" href="#"><img src="{% static 'Images/logo.jpg' %}" alt=""></a>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus quas doloremque iusto perspiciatis? At harum cupiditate ex sed, deleniti libero, nostrum possimus rem error sint ut voluptatibus facere exercitationem laboriosam modi. Alias nulla impedit illum doloribus veritatis accusamus quia pariatur aliquid unde rem voluptatem maxime, ipsa cupiditate. Autem, fugiat qui.</p>
+            <div class="social-links">
+              <a href=""><i class='bx bxl-linkedin'></i></a>
+              <a href=""><i class='bx bxl-instagram'></i></a>
+              <a href=""><i class='bx bxl-youtube'></i></a>
+              <a href=""><i class='bx bxl-twitter' ></i></a>
+            </div>
+            
+            <div class="mt-3">
+              <p>&copy; right <span id="year"></span> by Nicholas</p>
+              <script>
+                document.getElementById('year').innerHTML=new Date().getFullYear();
+              </script>
+            </div>
+          </center>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+ </footer>
+
+
+  </body>
+  <script src="{% static 'js/jquery.main.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </html>   
