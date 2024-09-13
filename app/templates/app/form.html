@@ -4,14 +4,15 @@
 {% block title %}New Blog{% endblock title %}
 
 {% block content %}
-    <div class="container mt-3 mb-3">
-        <h1 class="text-center">Create New Blog</h1>
+<div class="container mt-3 mb-3">
+    <h1 class="text-center">Create New Blog</h1>
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-            <form method="POST" enctype="multipart/form-data">
-                {{ form.as_p }}
-                <input type="submit" class="btn btn-success" value="submit">
-            </form>
-    </div>
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success" value="submit">
+    </form>
+</div>
+
 {% endblock content %}
 
 
