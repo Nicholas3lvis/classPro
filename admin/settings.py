@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://classpro-myvu.onrender.com',
+    'https://classpro-viyr.onrender.com',
 ]
 
 
