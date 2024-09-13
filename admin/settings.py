@@ -53,6 +53,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://classpro-myvu.onrender.com',
+]
+
+
 ROOT_URLCONF = 'admin.urls'
 
 TEMPLATES = [
