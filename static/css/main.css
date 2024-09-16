@@ -6,6 +6,94 @@
 }
 /* the column root is used for creating a global css variable */
 
+/* General mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0 15px;
+    }
+    
+    .top-nav {
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+    .contact {
+        margin: 5px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .social-links a {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .info-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .bg-img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .Services-box {
+        padding: 20px;
+    }
+
+    .Services-box img {
+        width: 80%;
+    }
+
+    .project .content {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .our-team {
+        margin-bottom: 20px;
+    }
+
+    .reviews {
+        margin-left: 0;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .blog-post img {
+        width: 100%;
+    }
+
+    footer {
+        padding: 10px 5px;
+        text-align: center;
+    }
+
+    footer .social-links a {
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
+
 /* Top-Nav */
 .top-nav{
     background-color: var(--brand);
